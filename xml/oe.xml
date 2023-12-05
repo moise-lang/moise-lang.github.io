@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<organisational-entity os="wp">
+    <goal committable="true" committedAgs="[]" permitted="true" possible="true" root="true" satisfied="false" satisfiedAgs="[]" specification="writePaperSoc"/>
+    <agents>
+        <agent id="Jomi">ok</agent>
+        <agent id="Jaime">ok<possible-goal goal="wtitle" scheme="sch_writePaperSch0"/>
+        </agent>
+        <agent id="Gustavo">ok</agent>
+    </agents>
+    
+    <groups>
+        <group id="gr_wpgroup0" specification="wpgroup">
+            <well-formed>ok</well-formed>
+            <players>
+                <role-player agent="Jaime" role="editor"/>
+                <role-player agent="Gustavo" role="writer"/>
+                <role-player agent="Jomi" role="writer"/>
+            </players>
+        </group>
+    </groups>
+    
+    <schemes>
+        <scheme id="sch_writePaperSch0" root-goal="wpGoal" specification="writePaperSch">
+            <well-formed>ok</well-formed>
+            <players>
+                <mission-player agent="Jomi" mission="mBib"/>
+                <mission-player agent="Jaime" mission="mManager"/>
+                <mission-player agent="Gustavo" mission="mColaborator"/>
+                <mission-player agent="Jomi" mission="mColaborator"/>
+            </players>
+            <responsible-groups>
+                <group id="gr_wpgroup0"/>
+            </responsible-groups>
+            <goals>
+                <goal committable="false" committedAgs="[Jaime]" permitted="true" possible="true" root="true" satisfied="false" satisfiedAgs="[]" specification="wpGoal">
+                    <plan operator="sequence">
+                        <goal ds="First Draft Version" id="fdv" min="all">
+                            <plan operator="sequence">
+                                <goal ds="Write a title" id="wtitle" min="all"/>
+                                <goal ds="Write an abstract" id="wabs" min="all"/>
+                                <goal ds="Write the sections' title" id="wsectitles" min="all"/>
+                            </plan>
+                        </goal>
+                        <goal ds="Submission Version" id="sv" min="all">
+                            <plan operator="sequence">
+                                <goal ds="Write sections" id="wsecs" min="all"/>
+                                <goal ds="Write a conclusion" id="wconc" min="all"/>
+                                <goal ds="Complete references and link them to text" id="wrefs" min="all"/>
+                            </plan>
+                        </goal>
+                    </plan>
+                </goal>
+                <goal committable="true" committedAgs="[Jaime]" permitted="true" possible="true" root="false" satisfied="false" satisfiedAgs="[]" specification="wtitle"/>
+                <goal committable="false" committedAgs="[Jaime]" permitted="false" possible="true" root="false" satisfied="false" satisfiedAgs="[]" specification="wsectitles"/>
+                <goal committable="false" committedAgs="[Jomi, Gustavo]" permitted="false" possible="true" root="false" satisfied="false" satisfiedAgs="[]" specification="wsecs"/>
+                <goal committable="false" committedAgs="[Jaime]" permitted="false" possible="true" root="false" satisfied="false" satisfiedAgs="[]" specification="wconc"/>
+                <goal committable="false" committedAgs="[Jomi]" permitted="false" possible="true" root="false" satisfied="false" satisfiedAgs="[]" specification="wrefs"/>
+                <goal committable="false" committedAgs="[Jomi]" permitted="false" possible="true" root="false" satisfied="false" satisfiedAgs="[]" specification="sv">
+                    <plan operator="sequence">
+                        <goal ds="Write sections" id="wsecs" min="all"/>
+                        <goal ds="Write a conclusion" id="wconc" min="all"/>
+                        <goal ds="Complete references and link them to text" id="wrefs" min="all"/>
+                    </plan>
+                </goal>
+                <goal committable="false" committedAgs="[Jaime]" permitted="false" possible="true" root="false" satisfied="false" satisfiedAgs="[]" specification="wabs"/>
+                <goal committable="false" committedAgs="[Jaime]" permitted="true" possible="true" root="false" satisfied="false" satisfiedAgs="[]" specification="fdv">
+                    <plan operator="sequence">
+                        <goal ds="Write a title" id="wtitle" min="all"/>
+                        <goal ds="Write an abstract" id="wabs" min="all"/>
+                        <goal ds="Write the sections' title" id="wsectitles" min="all"/>
+                    </plan>
+                </goal>
+            </goals>
+        </scheme>
+    </schemes>
+</organisational-entity>

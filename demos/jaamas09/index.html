@@ -1,0 +1,61 @@
+<html>
+<body>
+
+<h1>ORA4MAS - writing paper</h1>
+
+This page describe how to run the example writing paper of the paper
+
+<blockquote>
+Hubner, Boissier, Kitio, Ricci. <i>Instrumenting Multi-Agent
+Organisations with Organisational Artifacts and Agents</i>.  In
+JAAMAS 2009.
+</blockquote>
+
+This is a preliminary version of the application showing that the
+system runs, several issues are still under investigation,
+development.
+
+<h2>Requirements</h2>
+
+<ol>
+<li> Java 1.5
+<li> Ant
+</ol>
+
+<h2>Steps to run</h2>
+
+<ol>
+  <li><a href="writing-paper-v1.zip">download the example, clicking
+  here</a></li><br>
+  
+  <li>Run ORA4MAS workspace.<br>
+
+    in a command shell, type<br>
+	<blockquote><code>ant ora4mas</code></blockquote>
+
+  <li>Run Jason agents<br>
+
+    in a command shell, type<br>
+	<blockquote><code>ant jason</code></blockquote>
+
+  <li>Run JADEX agents<br>
+
+    in a command shell, type<br>
+	<blockquote><code>ant jadex</code></blockquote>
+
+    in the field 'filename' fill
+	<code>src/ora4mas/jadex/orgAg_Jadex_paper.agent.xml</code> 
+
+    and then press start
+</ol>
+
+The result of the execution appears in the Jason console (where two
+agents run) and in the console of Jadex (where one agent is running).
+
+<h2>Acknowledgement</h2>
+
+We'd like to thank Michele Piunti for the development of the JADEX agents.
+
+
+</body>
+</html>
