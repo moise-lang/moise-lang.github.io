@@ -1,0 +1,24 @@
+= Moise -- Organisation Oriented Programming Framework
+
+
+Moise is an organisational platform for MultiAgent Systems based on notions like roles, groups, and missions. It enables an MAS to have an explicit specification of its organisation. This specification is to be used both by the agents to reason about their organisation and by an organisation platform that enforces that the agents follow the specification.
+
+== Software
+
+- Moise is part of https://jacamo-lang.github.io[JaCaMo platform], by downloading JaCaMo you get the latest version of Moise.
+
+- https://github.com/moise-lang/moise[GitHub Repository]
+
+== Documentation
+
+- https://github.com/moise-lang/moise/blob/main/doc/ora4mas/readme.adoc[ORA4MAS]
+- https://github.com/moise-lang/moise/blob/main/doc/release-notes.adoc[Release Notes]
+- https://github.com/moise-lang/moise/tree/master/doc/publications[Publications]
+- link:./index-old.html[old page]
+
+
+== Project members
+
+- link:https://jomifred.github.io[Jomi Fred Hübner (UFSC, Brazil)]
+- link:https://www2.pcs.usp.br/~jaime/[Jaime Simão Sichman (USP, Brazil)]
+- link:https://www.emse.fr/~boissier/[Olivier Boissier (ENSM.SE, France)]
